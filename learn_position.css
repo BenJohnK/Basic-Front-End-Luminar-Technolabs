@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.header{
+    height: 500px;
+    background-image: url("images/banner.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+nav{
+    position: fixed;
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.col{
+    height: 200px;
+    width: 400px;
+    background-color: blue;
+    margin-top: 10px;
+    border: 1px solid black;
+}
+#one{
+    height: 100px;
+    flex-grow: 2;
+}

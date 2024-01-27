@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+h1{
+    border: 1px solid black;
+    padding: 100px;
+    margin: 10px;
+    margin-bottom: 100px;
+}
+label{
+    border: dotted;
+    padding: 20px;
+    margin: 10px;
+}
+div{
+    height: 400px;
+    width: 200px;
+    background-color: yellow;
+    border: 1px solid black;
+}
+#second{
+    margin-left: 17%;
+    margin-top: -26.5%;
+}
+#third{
+    margin-left: 34%;
+    margin-top: -26.5%;
+}
+#fourth{
+    margin-left: 51%;
+    margin-top: -26.5%;
+}

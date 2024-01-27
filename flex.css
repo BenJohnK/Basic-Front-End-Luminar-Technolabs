@@ -1,0 +1,13 @@
+ 
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     /* Set the height of the row to the full viewport height */
+}
+
+.square {
+    width: 10%;
+    background-color: blue; /* Set the background color of the square */
+    aspect-ratio: 1;
+}
