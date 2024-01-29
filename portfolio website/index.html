@@ -18,17 +18,19 @@
         <nav class="nav">
             <a href=""><img src="images/logo.png" alt=""></a>
             <div class="nav-links">
+                <i id="close-menu" class="fa-solid fa-xmark" onclick="closeMenu()"></i>
                 <ul>
-                    <li><a href=""><b>HOME</b></a></li>
-                    <li><a href=""><b>ABOUT</b></a></li>
-                    <li><a href=""><b>SKILLS</b></a></li>
-                    <li><a href=""><b>CONTACT</b></a></li>
+                    <li><a href=".header"><b>HOME</b></a></li>
+                    <li><a href=".about"><b>ABOUT</b></a></li>
+                    <li><a href=".skills"><b>SKILLS</b></a></li>
+                    <li><a href=".contacts"><b>CONTACT</b></a></li>
                 </ul>
             </div>
+            <i id="showmenu" class="fa-solid fa-bars" onclick="showMenu()"></i>
         </nav>
         <div class="heading">
-            <p style="border: 1px solid black;"><b>I'm Ana</b> <span id="steel">Steel</span></p>
-            <p id="desc" style="border: 1px solid red;">This is my official portfolio website to describe all<br>details and work experience in Web Development</p>
+            <p><b>I'm Ana</b> <span id="steel">Steel</span></p>
+            <p id="desc">This is my official portfolio website to describe all details and work experience in Web Development</p>
             <button id="download">DOWNLOAD CV</button>
         </div>
         <div id="image-wrapper">
@@ -84,5 +86,58 @@
             </div>
         </div>
     </section>
+    <section class="contacts">
+        <h1 class="headings">Contact</h1>
+        <p class="sub-headings">My Contacts</p>
+        <div class="sm-icons">
+            <div class="icon-wrap"><a href="https://www.linkedin.com/in/ben-john-k-0459a4112/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></div>
+            <div class="icon-wrap"><a href="https://www.github.com/BenJohnK" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+            <div class="icon-wrap"><a href="https://www.linkedin.com/in/ben-john-k-0459a4112/" target="_blank"><i class="fa-brands fa-twitter"></i></a></div>
+            <div class="icon-wrap"><a href="https://www.linkedin.com/in/ben-john-k-0459a4112/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
+            <div class="icon-wrap"><a href="https://www.linkedin.com/in/ben-john-k-0459a4112/" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+            <div class="icon-wrap"><a href="mailto:benjohn.mec@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></div>
+        </div>
+        <p>© My Portfolio Website 2023, All Reserved to ® Ana Steel</p>
+    </section>
+    <script>
+        document.getElementById('download').addEventListener('click', function() {
+            // Create a new PDF blob
+            var pdfPath = "documents/Ben John_Resume_3+yrs.pdf"
+
+            // Create a link element
+            var downloadLink = document.createElement('a');
+
+            // Set the download attribute with the desired file name
+            downloadLink.download = 'Ben John_Resume_3+yrs.pdf';
+
+            // Create a URL for the PDF blob
+            downloadLink.href = pdfPath
+
+            // Append the link to the document
+            document.body.appendChild(downloadLink);
+
+            // Trigger a click on the link to start the download
+            downloadLink.click();
+
+            // Remove the link from the document
+            document.body.removeChild(downloadLink);
+        });
+        function showMenu(){
+            var menu=document.getElementsByClassName('nav-links')[0]
+            menu.style.right = '0'
+        }
+        function closeMenu(){
+            var menu=document.getElementsByClassName('nav-links')[0]
+            menu.style.right = '-200px'
+        }
+        document.querySelectorAll('a[href^="."]').forEach(anchor =>{
+            anchor.addEventListener('click', function(e){
+                e.preventDefault()
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                })
+            })
+        })
+    </script>
 </body>
 </html>
